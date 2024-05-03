@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc8alxkp0mhjb"]
+
+[ext_resource type="Script" path="res://scripts/player/controller.gd" id="1_7ebk3"]
+[ext_resource type="PackedScene" uid="uid://slvyckhkrivx" path="res://sprites/potato.aseprite" id="1_57047"]
+
+[node name="Main" type="Node2D"]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Player" type="Node2D" parent="World"]
+position = Vector2(300, 300)
+script = ExtResource("1_7ebk3")
+
+[node name="AnimatedSprite2D" parent="World/Player" instance=ExtResource("1_57047")]
+position = Vector2(2.08165e-12, 2.08165e-12)
+frame_progress = 0.218105
+speed_scale = 0.3
