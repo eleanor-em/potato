@@ -37,7 +37,9 @@ func _physics_process(delta: float):
 	position = ground_position - height * Vector2.UP
 
 	state.update_velocity(delta)
-	velocity /= friction
+	# NOTE: target delta is 1/60. Delay-corrected version of:
+	# `velocity /= friction`
+	velocity = velocity.lerp(velocity / friction, delta*60)
 
 func _draw():
 	draw_circle(shadow_offset + height * Vector2.UP,
