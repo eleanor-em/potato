@@ -5,14 +5,10 @@ enum Type {
 	Run,
 	Fall,
 }
-
-var Idle = Type.Idle
-var Run = Type.Run
-
 var controller: Controller
 var animated_sprite: AnimatedSprite2D
 
-func setup(controller_, animated_sprite_):
+func setup(controller_: Controller, animated_sprite_: AnimatedSprite2D):
 	controller = controller_
 	animated_sprite = animated_sprite_
 
@@ -31,10 +27,10 @@ func action_move_down():
 func action_jump():
 	pass
 
-func update_position(_delta):
+func update_position(_delta: float):
 	pass
 
-func update_velocity(_delta):
+func update_velocity(_delta: float):
 	pass
 
 func change_to_idle():

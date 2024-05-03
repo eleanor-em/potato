@@ -1,18 +1,19 @@
 class_name Controller extends Node2D
 
 var animated_sprite: AnimatedSprite2D
-var state
-var state_factory
+var state: State
+var state_factory: StateFactory
 
 var ground_position = self.position
-var height = 0.0
+var height: float = 0.0
 var velocity = Vector2.ZERO
-var z_velocity = 0.0
-@export var friction = 1.4
-@export var jump_velocity = 400
-@export var shadow_offset = Vector2(0, 54)
-@export var shadow_radius = 20
-@export var gravity = 1500
+var z_velocity: float = 0.0
+
+const friction: float = 1.4
+const jump_velocity: float = 400
+const shadow_offset = Vector2(0, 54)
+const shadow_radius: float = 20
+const gravity: float = 1500
 
 func _ready():
 	animated_sprite = $AnimatedSprite2D

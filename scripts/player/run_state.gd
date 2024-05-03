@@ -1,7 +1,7 @@
 class_name RunState extends State
 
-@export var move_speed = Vector2(45, 50)
-@export var min_move_speed = 10
+const move_speed = Vector2(45, 50)
+const min_move_speed = 10
 
 func _ready():
 	# Begin animation immediately.
