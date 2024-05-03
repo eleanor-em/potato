@@ -1,6 +1,6 @@
 class_name RunState extends State
 
-@export var move_speed = Vector2(50, 55)
+@export var move_speed = Vector2(45, 50)
 @export var min_move_speed = 10
 
 func _ready():

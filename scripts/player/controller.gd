@@ -35,8 +35,6 @@ func _physics_process(delta: float):
 	state.update_position(delta)
 	ground_position += velocity * delta
 	position = ground_position - height * Vector2.UP
-	if height != 0:
-		queue_redraw()
 
 	state.update_velocity(delta)
 	velocity /= friction
